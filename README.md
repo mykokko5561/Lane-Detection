@@ -6,6 +6,8 @@ This project implements a foundational computer vision pipeline for lane detecti
 
 Bu proje, otonom araç navigasyonunun temel bileşenlerinden biri olan şerit tespiti için OpenCV tabanlı bir bilgisayarlı görü (computer vision) boru hattı (pipeline) sunmaktadır. Sistem, yola kuşbakışı bir açıdan bakmak için perspektif dönüşümü uygular, HSV renk eşikleme ile şerit çizgilerini arka plandan ayırır ve histogram analizi ile şeritlerin başlangıç noktalarını belirler. Ardından, klasik Kayan Pencere (Sliding Window) algoritmasını kullanarak şeritleri kare kare takip eder ve hesaplanan güvenli sürüş rotasını orijinal video akışının üzerine yansıtır. Görüntü işleme tekniklerinin, matris dönüşümlerinin ve robotik alanındaki algoritmik düşünce yapısının pratik bir gösterimi olarak tasarlanmıştır.
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # The Sliding Window Algorithm (Eng.)
 
 The Sliding Window algorithm serves as the core tracking mechanism of this project. After applying the perspective transformation and color masking, the system computes a pixel histogram of the lower half of the image to identify the starting x-coordinates of the left and right lanes. From these base points, a series of rectangular "windows" sequentially slide upward across the image, isolating the non-zero pixels that represent the lane markings. By calculating the center of mass (mean position) for the pixels within each window, the algorithm dynamically adjusts the horizontal position of the subsequent window. This continuous recentering allows the system to accurately track and trace the lane lines, adapting to curves and changes in the road's trajectory.
@@ -18,7 +20,7 @@ Kayan Pencere algoritması, bu projenin temel şerit takip mekanizması olarak g
 
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/bd844b19-2dfb-4605-93a2-f3a8fa63ee9a" />
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Adaptive Perspective Mapping (Dynamic Pitch Compensation) (Eng.)
 
@@ -30,6 +32,8 @@ Sabit perspektif dönüşümlerinin eğimli yollarda (yokuş aşağı/yukarı) y
 
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/2ab3aec5-22a0-410a-bf9b-096148c0a2f4" />
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 # Probabilistic Hough Transform Lane Detection (Eng.)
 This module implements a lightweight and highly efficient lane tracking pipeline optimized for real-time performance. It utilizes Canny Edge Detection to identify high-contrast structural outlines and applies a polygonal Region of Interest (ROI) mask to isolate the drivable path. The core detection engine leverages the Probabilistic Hough Line Transform (cv2.HoughLinesP) to mathematically extract linear lane segments from the edge map. These segments are dynamically separated into left and right boundaries based on their spatial slopes, averaged using 1st-degree polynomial fitting, and extrapolated to reconstruct the continuous lane lines. Designed with fault tolerance in mind, the system features a state-memory fallback mechanism to maintain a stable trajectory even when lane markings are temporarily obscured or missing.
 
@@ -39,6 +43,7 @@ Bu modül, gerçek zamanlı performans için optimize edilmiş, sistem kaynaklar
 
 <img width="1592" height="900" alt="image" src="https://github.com/user-attachments/assets/bdf97b78-bfcb-404d-bed1-ca771304995c" />
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # To install libraries:
 pip install opencv-python numpy
