@@ -20,6 +20,14 @@ Kayan Pencere algoritması, bu projenin temel şerit takip mekanizması olarak g
 
 
 
+# Adaptive Perspective Mapping (Dynamic Pitch Compensation)
+
+To overcome the inherent limitations of fixed perspective transformations on inclined roads, this system addresses the geometric distortion caused by uphill and downhill gradients. Traditional static Region of Interest (ROI) selections fail when the vehicle's pitch changes, causing the bird's-eye view to misalign. To solve this, the pipeline can be enhanced with Adaptive Perspective Mapping. By dynamically adjusting the ROI source points based on real-time Vanishing Point Detection (or IMU sensor fusion), the algorithm ensures the transformation matrix remains perfectly parallel to the road surface. This adaptive approach prevents the sliding window logic from collapsing during elevation changes, ensuring robust lane tracking in highly dynamic, real-world driving conditions.
+
+# Adaptif Perspektif Haritalama (Dinamik Eğim Telafisi)
+
+Sabit perspektif dönüşümlerinin eğimli yollarda (yokuş aşağı/yukarı) yarattığı kaçınılmaz geometri bozulmalarının önüne geçmek için bu sistem, Adaptif Perspektif Haritalama yaklaşımını ele almaktadır. Geleneksel sabit İlgi Alanı (ROI) seçimleri, aracın yunuslama (pitch) açısı değiştiğinde kuşbakışı görünümün yoldan sapmasına neden olur. Bu sorunu çözmek için, ROI kaynak noktaları eşzamanlı Kaçış Noktası Tespiti (Vanishing Point Detection) veya IMU sensör füzyonu kullanılarak dinamik olarak güncellenmelidir. Bu sayede, dönüşüm matrisinin yol yüzeyiyle her zaman mükemmel şekilde hizalı kalması sağlanır. Bu adaptif yapı, yükseklik değişimlerinde kayan pencere (sliding window) algoritmasının çökmesini engeller ve oldukça dinamik olan gerçek dünya sürüş koşullarında stabil şerit takibi sunar.
+
 
 
 
