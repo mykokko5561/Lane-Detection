@@ -28,6 +28,7 @@ To overcome the inherent limitations of fixed perspective transformations on inc
 
 Sabit perspektif dönüşümlerinin eğimli yollarda (yokuş aşağı/yukarı) yarattığı kaçınılmaz geometri bozulmalarının önüne geçmek için bu sistem, Adaptif Perspektif Haritalama yaklaşımını ele almaktadır. Geleneksel sabit İlgi Alanı (ROI) seçimleri, aracın yunuslama (pitch) açısı değiştiğinde kuşbakışı görünümün yoldan sapmasına neden olur. Bu sorunu çözmek için, ROI kaynak noktaları eşzamanlı Kaçış Noktası Tespiti (Vanishing Point Detection) veya IMU sensör füzyonu kullanılarak dinamik olarak güncellenmelidir. Bu sayede, dönüşüm matrisinin yol yüzeyiyle her zaman mükemmel şekilde hizalı kalması sağlanır. Bu adaptif yapı, yükseklik değişimlerinde kayan pencere (sliding window) algoritmasının çökmesini engeller ve oldukça dinamik olan gerçek dünya sürüş koşullarında stabil şerit takibi sunar.
 
+<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/2ab3aec5-22a0-410a-bf9b-096148c0a2f4" />
 
 
 
