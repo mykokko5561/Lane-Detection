@@ -40,6 +40,10 @@ Bu modül, gerçek zamanlı performans için optimize edilmiş, sistem kaynaklar
 <img width="1592" height="900" alt="image" src="https://github.com/user-attachments/assets/bdf97b78-bfcb-404d-bed1-ca771304995c" />
 
 
+# To install libraries:
+pip install opencv-python numpy
+
+
 
 
 
