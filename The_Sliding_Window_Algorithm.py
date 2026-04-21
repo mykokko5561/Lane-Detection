@@ -1,5 +1,7 @@
-#if your camera is not the same angle to mine you need to change the red dots cordinatione you want to place like photo.4 and there is placing_dots.py file you can copy paste it in this
-#code and you can find (x,y) after you change on lines 37-40 you can delete that additional code line  
+# Note: If your camera angle differs from mine, you will need to adjust the red dot coordinates (as shown in photo 4). 
+# You can use the 'placing_dots.py' script to find the correct (x, y) values. 
+# Just copy and paste that snippet into this code to locate your points. 
+# Once you update lines 37-40, you can delete the temporary helper code.
 import cv2
 import numpy as np
 
