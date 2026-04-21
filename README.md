@@ -1,4 +1,4 @@
-<img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/e37fff78-8cd9-4237-9a89-a0c0269494d5" /># Lane-Detection  (Eng.)
+# Lane-Detection (Eng.)
 
 This project implements a foundational computer vision pipeline for lane detection, a core component of autonomous vehicle navigation. Using OpenCV, the system applies a perspective transformation to generate a bird's-eye view of the road, isolates lane markings through dynamic HSV color thresholding, and identifies lane bases using histogram analysis. Finally, it utilizes the classic Sliding Window algorithm to track the lane lines frame-by-frame, projecting the detected safe driving path back onto the original video stream. It serves as a practical demonstration of image processing techniques, matrix transformations, and algorithmic thinking in robotics.
  
