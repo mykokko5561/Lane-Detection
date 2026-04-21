@@ -30,6 +30,15 @@ Sabit perspektif dönüşümlerinin eğimli yollarda (yokuş aşağı/yukarı) y
 
 <img width="1024" height="559" alt="image" src="https://github.com/user-attachments/assets/2ab3aec5-22a0-410a-bf9b-096148c0a2f4" />
 
+# Probabilistic Hough Transform Lane Detection (Eng.)
+This module implements a lightweight and highly efficient lane tracking pipeline optimized for real-time performance. It utilizes Canny Edge Detection to identify high-contrast structural outlines and applies a polygonal Region of Interest (ROI) mask to isolate the drivable path. The core detection engine leverages the Probabilistic Hough Line Transform (cv2.HoughLinesP) to mathematically extract linear lane segments from the edge map. These segments are dynamically separated into left and right boundaries based on their spatial slopes, averaged using 1st-degree polynomial fitting, and extrapolated to reconstruct the continuous lane lines. Designed with fault tolerance in mind, the system features a state-memory fallback mechanism to maintain a stable trajectory even when lane markings are temporarily obscured or missing.
+
+# Olasılıksal Hough Dönüşümü ile Şerit Tespiti (Türkçe)
+
+Bu modül, gerçek zamanlı performans için optimize edilmiş, sistem kaynaklarını yormayan yüksek verimli bir şerit takip boru hattı (pipeline) sunmaktadır. Yüksek kontrastlı yapısal hatları belirlemek için Canny Kenar Tespiti (Canny Edge Detection) algoritmasını kullanır ve sürülebilir rotayı izole etmek için çokgen bir İlgi Alanı (ROI) maskesi uygular. Temel tespit motoru, doğrusal şerit parçalarını kenar haritasından matematiksel olarak çıkarmak için Olasılıksal Hough Çizgi Dönüşümü'nden (cv2.HoughLinesP) yararlanır. Bu parçalar daha sonra uzamsal eğimlerine göre sol ve sağ sınırlar olarak ayrılır, 1. dereceden polinom uydurma (polynomial fitting) ile ortalamaları alınır ve kesintisiz şerit çizgilerini yeniden oluşturmak üzere uzatılır. Hata toleransı (fault tolerance) göz önünde bulundurularak tasarlanan sistem, şerit çizgilerinin geçici olarak kaybolduğu veya silikleştiği durumlarda yörüngeyi stabil tutmak için bir durum-bellek (state-memory) geri dönüş mekanizması barındırır.
+
+<img width="1592" height="900" alt="image" src="https://github.com/user-attachments/assets/bdf97b78-bfcb-404d-bed1-ca771304995c" />
+
 
 
 
